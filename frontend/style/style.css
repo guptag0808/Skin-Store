@@ -1,0 +1,329 @@
+/* body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20%;
+		} */
+
+
+body{
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+	background: rgb(184, 218, 236);
+}
+
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+nav div {
+	width: 33%;
+}
+
+#logo_image {
+	width: 40%;
+}
+
+#search {
+	width: 50%;
+
+	margin-top: 10px;
+
+}
+
+#search>input {
+	width: 80%;
+	height: 80%;
+	border: none;
+	background: rgb(236, 236, 241);
+}
+
+#search>button {
+	height: 82%;
+	margin-left: -5px;
+	border: none;
+	background-color: rgb(180, 187, 199);
+}
+
+/* icons */
+#icons i {
+	width: 40px;
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 0px;
+	/* border: 2px solid red; */
+	/* height: 100px; */
+	/* padding: 20px; */
+}
+
+#top-div {
+	height: 50px;
+	width: 100%;
+	background: rgb(75, 133, 167);
+	display: flex;
+	/* border: 2px solid red; */
+	justify-content:center;
+	font-size: 30px;
+	cursor: pointer;
+	
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	margin: auto;
+
+}
+
+#dropdown {
+	/* position: relative; */
+}
+#dropdown h1{
+	font-size: 15px;
+	margin-left: 20px;
+	padding-top: 8px;
+	color: aliceblue;
+}
+
+h1 {
+	/* color: rgb(0, 132, 255); */
+	font-size: 20px;
+	/* text-align: center; */
+}
+
+#dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+.dropdown-menu a {
+	display: flex;
+	flex-direction: row;
+	text-decoration: none;
+	background-color: grey;
+	color: white;
+	padding: 3px;
+	margin: auto;
+	margin-left: 40px;
+	padding-left: 20px;
+	background: rgb(75, 133, 167);
+	font-size: 15px;
+	font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+#afterhover{
+	display: flex;
+	justify-content:center;
+	/* margin-left: 100px; */
+	color: rgb(71, 68, 68);
+	font-size: 14px;
+}
+#afterhover p{
+	margin-left: 20px;
+}
+#image{
+	width: 100%;
+	/* height:1000px; */
+	display: flex;
+	
+	
+}
+#first{
+	width: 80%;
+	animation: slider 15s infinite linear;
+	
+}
+#second{
+	width: 20%;
+}
+
+.mobile{
+	display: flex;
+	width: 95%;
+	margin: auto;
+	background:white;
+	margin-top: 30px;
+	
+}
+.mobile img{
+	width: 100%;
+	/* border: 2px solid red; */
+}
+.mobile p{
+	color: grey;
+	text-align: center;
+}
+.more{
+	padding-left: 150px;
+}
+.daily_esse{
+	height: 150px;
+	/* border: 2px solid blue; */
+	width: 100%;
+	text-align: center;
+	
+}
+.daily_esse img{
+	width: 60%;
+	margin-top: 10px;
+}
+#himalya{
+  width: 80%;
+}
+
+#daily{
+	margin-left: 25px;
+}
+
+/* #decreseSize{
+	width: 100%;
+	height: 200px;
+	border: 2px solid red;
+} */
+
+.saree{
+ width: 95%;
+ display: flex;
+ margin: auto;
+ background-color: aliceblue;
+text-align: center;
+
+}
+.saree div{
+	width: 20%;
+}
+.saree img{
+	width: 100%;
+}
+.saree p{
+	color: grey;
+}
+.h1{
+	margin-left: 30px;
+}
+#budget_bazar{
+	display: grid;
+	grid-template-columns: repeat(5,1fr);
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+#budget_bazar img{
+	width: 100%;
+
+}
+
+#ABG{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+#ABG img{
+	width: 100%;
+}
+#sports{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	margin:auto;
+	width: 95%;
+	background-color:white;
+	text-align: center;
+	margin-top: 20px;
+}
+#sports p{
+color: grey;
+}
+#sports img{
+	width: 100%;
+	margin-top: 20px;
+}
+h3{
+	margin-left: 20px;
+	color: rgb(66, 60, 60);
+}
+.abc{
+	width: 50%;
+}
+.xyz{
+	width: 40%;
+}
+.aaa{
+	width: 40%;
+}
+#Brand{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	margin: auto;
+	width: 95%;
+	text-align: center;
+	/* border: 2px solid red; */
+	background-color: white;
+}
+#Brand img{
+margin-top: 20px;
+}
+
+
+.all{
+	width: 100%;
+	/* border: 2px solid black; */
+}
+#brands_deals{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	background-color: white;
+	width: 95%;
+	margin: auto;
+	text-align: center;
+
+}
+span{
+	color: rgb(73, 69, 69);
+	font-weight:lighter;
+	font-size: 15px;
+	margin-left: 15px;
+}
+#brands_deals p{
+	color: grey;
+}
+#last{
+	margin-left: 25px;
+	/* background-color: white; */
+}
+hr{
+	margin-top: 40px;
+}
+
+#end{
+	margin-left: 25px;
+	color:  rgb(73, 69, 69);;
+}
+#payment{
+	margin-left: 25px;
+	display: flex;
+	
+}
+#payment>div{
+	width: 80%;
+}
+#card img {
+	width: 100%;
+	/* border: 2px solid red; */
+}
+#card{
+	display: flex;
+	width: 100%;
+	
+}
+#card div{
+	width: 15%;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  nav{
+	flex-direction: row;
+  }
+}
