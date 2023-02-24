@@ -147,7 +147,8 @@ h1 {
 	
 }
 .mobile img{
-	width: 100%;
+	width: 60%;
+	margin-top: 20px;
 	/* border: 2px solid red; */
 }
 .mobile p{
@@ -160,7 +161,7 @@ h1 {
 .daily_esse{
 	height: 150px;
 	/* border: 2px solid blue; */
-	width: 100%;
+	width: 80%;
 	text-align: center;
 	
 }
@@ -171,7 +172,9 @@ h1 {
 #himalya{
   width: 80%;
 }
-
+#himalya img{
+	width:40%
+}
 #daily{
 	margin-left: 25px;
 }
@@ -190,11 +193,23 @@ h1 {
 text-align: center;
 
 }
-.saree div{
+.saree div {
 	width: 20%;
+	
 }
+.saree div:hover{
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	border: 1px solid grey;
+	cursor: pointer;
+}
+.saree img:hover{
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	width: 70%;
+}
+
 .saree img{
-	width: 100%;
+	width: 60%;
+	margin-top: 20px;
 }
 .saree p{
 	color: grey;
@@ -240,6 +255,7 @@ color: grey;
 	width: 100%;
 	margin-top: 20px;
 }
+
 h3{
 	margin-left: 20px;
 	color: rgb(66, 60, 60);
@@ -264,8 +280,48 @@ h3{
 }
 #Brand img{
 margin-top: 20px;
+width: 30%;
+}
+#khadi{
+ margin-top:20px ;
+}
+#phillips{
+	margin-top: 90px;
+	/* border: 2px solid red; */
+}
+/* #milton{
+	margin-top: 70px;
+} */
+#khadibrand{
+	margin-top: 30px;
+}
+#miltonbrand{
+	padding-top:5px;
+	/* border: 2px solid red; */
+}
+#miltonbrand>img{
+	width: 50%;
+}
+#sports img{
+	width: 50%;
+}
+#sports{
+    text-align: center;
+	align-items: center;
+}
+#medical{
+	margin-top: 30px;
+}
+#bottle{
+	margin-top: 25px;
+}
+#nutri{
+	margin-top: 40px;
 }
 
+#yoga{
+	margin-top: 60px;
+}
 
 .all{
 	width: 100%;
@@ -279,6 +335,10 @@ margin-top: 20px;
 	margin: auto;
 	text-align: center;
 
+}
+#brands_deals img{
+	width: 50%; 
+	margin-top: 20px;
 }
 span{
 	color: rgb(73, 69, 69);
