@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Chick-n-Fry</title>
+    <link rel="stylesheet" href="./style/signin.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+    <nav id="nav">
+        <img src="./image/logo.png" alt="">
+        <h1>SIGNUP</h1>
+    </nav>
+    
+    <div id="main">
+      
+        <form>
+            <input type="text" id="firstname" name="firstname" placeholder=" Enter your first-name" required><br>
+            <input type="email"  id="email" name="email" placeholder=" Enter your email" required><br>
+			<input type="password" id="password" name="password" placeholder=" Enter your password" required><br><br>
+			<input type="number" id="mob" name="Mobile" placeholder=" Enter your Mobile Number" required><br><br>
+			<input type="text" id="city"  placeholder=" Enter your City" required><br><br>
+
+          
+
+            <input type="submit" onclick="onSignUp()" value="Create account">
+        </form>
+        <br>
+        <p>Already have a account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+
+</html>
+<script>
+	document.getElementById("nav").addEventListener("click", () => {
+    window.location.href = "index.html"
+})
+
+const onSignUp=() => {
+    event.preventDefault()
+    const payload = {
+        name:document.getElementById('firstname').value,
+		
+        // lastname:document.getElementById('lastname').value,
+        email:document.getElementById('email').value,
+        
+        password:document.getElementById('password').value,
+		mob:document.getElementById('mob').value,
+		city:document.getElementById('city').value
+    }
+	console.log(payload)
+    fetch("http://localhost:8080/user/register",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(res =>  console.log(res))
+    .catch(err => console.log(err))
+}
+</script>

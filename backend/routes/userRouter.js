@@ -5,8 +5,14 @@ var jwt = require('jsonwebtoken');
 
 const userRouter= express.Router()
 
+userRouter.get("/",async(req,res)=>{
+
+	const user=await userModel.find()
+	res.send(user)
+})
+
 userRouter.post("/register",async(req,res)=>{
-	const {name,email,age,mob,password,city}= req.body;
+	const {name,email,password,mob,city}= req.body;
 	const check= await userModel.findOne({email})
 	if(check){
 		res.send({"msg":"User Already Register Please Login "})
@@ -15,7 +21,7 @@ userRouter.post("/register",async(req,res)=>{
 			bcrypt.hash(password, 5,async(err, hash)=> {
 				 if(err) res.send(err)
 				 else{
-					const user=new userModel({name,email,age,mob,password:hash,city})
+					const user=new userModel({name,email,password:hash,mob,city})
 					await user.save()
 					res.send(user)
 				 }
