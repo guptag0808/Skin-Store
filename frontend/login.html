@@ -53,7 +53,7 @@ const login=() => {
     fetch("http://localhost:5500/user/login",{
         method:"POST",
         headers:{
-            "Content-type":"application/json"
+            "Content-Type":"application/json"
         },
         body: JSON.stringify(payload)
     })

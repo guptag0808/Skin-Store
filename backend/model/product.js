@@ -1,6 +1,6 @@
 const mongoose= require("mongoose")
 
-const productSchema= mongoose.connect({
+const productSchema= mongoose.Schema({
 	"image":String,
 	"title":String,
 	"price":String,
@@ -8,6 +8,8 @@ const productSchema= mongoose.connect({
 	"shipping":String
 
 })
+  const ProductModel= mongoose.model("product",productSchema)
+
 module.exports={
-	productSchema
+	ProductModel
 }

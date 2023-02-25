@@ -15,7 +15,7 @@ userRouter.post("/register",async(req,res)=>{
 	const {name,email,password,mob,city}= req.body;
 	const check= await userModel.findOne({email})
 	if(check){
-		res.send({"msg":"User Already Register Please Login "})
+		res.send({"msg":"User Already Register Please Login"})
 	}else{
 		try{
 			bcrypt.hash(password, 5,async(err, hash)=> {
@@ -41,7 +41,7 @@ userRouter.post("/register",async(req,res)=>{
 			if(user.length>0){
 				bcrypt.compare(password, user[0].password, (err, result) =>{
 					if(result){
-						var token = jwt.sign({ project:"apnaghar" }, 'fulldiscount');
+						var token = jwt.sign({ userId:user[0]._id}, 'fulldiscount');
 						res.send({"msg":"Login SuccessFull","token":token})
 					}else{
 						res.send({"msg":"Please enter correct possword"})

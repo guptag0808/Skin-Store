@@ -2,6 +2,8 @@ const express = require("express")
 const {connection}= require("./db")
 const{userRouter}=require("./routes/userRouter")
 const {homeRouter}=require("./routes/crudOperation")
+const {productrouter}=require("./routes/productRouter")
+const{authentication}=require("./authentication")
 const cors= require("cors")
 require('dotenv').config()
 const app =express()
@@ -17,6 +19,8 @@ app.get("/abc",(req,res)=>{
 app.use(cors())
 app.use("/user",userRouter)
 app.use("/home",homeRouter)
+app.use("/dinnerset",productrouter)
+app.use("/product",productrouter)
 
 app.listen(process.env.port,async()=>{
 	try{
